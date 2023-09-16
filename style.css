@@ -1,0 +1,213 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0 !important;
+  background-color: rgb(212, 212, 212);
+
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+table {
+  border: 1px solid rgb(181, 181, 181);
+  border-collapse: collapse
+}
+
+th, td {
+  border: 1px solid rgb(181, 181, 181);
+  border-collapse: collapse;
+  text-align: left;
+  padding: 10px;
+}
+
+.header {
+  padding: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  background-color: white;
+}
+
+.body {
+  border-top: 1px solid black;
+  padding: 20px 10px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items:flex-end;
+}
+
+.search-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid rgb(183, 183, 183);
+}
+
+.button {
+  padding: 10px;
+  background-color: rgb(205, 79, 79);
+  color: white;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.book-list{
+  background-color: white;
+  margin: 30px 0px;
+}
+
+.delete {
+  text-decoration: underline;
+  color: rgb(205, 79, 79);
+  cursor: pointer;
+}
+
+
+.form-inline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#add_book_popup_box {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  padding-top: 100px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:100px; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:100px; opacity:1}
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: white;
+}
+
+.form-inline input,
+select {
+  margin: 5px 0px;
+}
+
+.form-inline .submit {
+  margin: 15px auto;
+  margin-right: 0;
+  padding: 10px 20px;
+  border-radius: none;
+  font-weight: bold;
+}
+
+.topic {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+#delete_book_popup_box {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  padding-top: 100px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.delete_modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.delete_modal-header {
+  padding: 2px 16px;
+  text-align: center;
+}
+
+.delete_modal-body {
+  padding: 6px 55px;
+  text-align: center;
+}
+
+.confirm {
+  margin: 15px auto;
+  margin-right: 0;
+  padding: 10px 20px;
+  border-radius: none;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+}
+
+.cancel {
+  margin: 15px auto;
+  margin-right: 0;
+  padding: 10px 20px;
+  border-radius: none;
+  font-weight: bold;
+}

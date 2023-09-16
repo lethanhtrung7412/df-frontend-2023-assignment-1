@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Bookstore</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="header">
+    <span>Bookstore</span>
+  </div>
+  <div class="body">
+    <div class="search">
+      <button class="button" id="add_book_open">Add book</button>
+      <input type="text" placeholder="Search book" size="30" class="search-input" id="search" onkeyup="search()" />
+    </div>
+    <div class="book-list">
+      <table style="width: 100%;" id="book_list">
+        <thead>
+          <tr>
+            <th style="width: 50%;">Name</th>
+            <th style="width: 20%;">Author</th>
+            <th style="width: 20%;">Topic</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="add_book">
+          <!-- <tr>
+                <td>Refactoring</td>
+                <td>Martin Flower</td>
+                <td>Programming</td>
+                <td class="delete" onclick="this.parentNode.remove()">
+                  Delete
+                </td>
+              </tr> -->
+        </tbody>
+      </table>
+    </div>
+    <div id="add_book_popup_box">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="add_book_close" class="close">×</span>
+
+          <h2>Add book</h2>
+        </div>
+
+        <div class="modal-body">
+          <form class="form-inline" id="new_book_submit">
+            <label for="name">Name</label>
+            <input name="name" id="name" type="text" placeholder="Search book" size="47" class="search-input" required>
+            <label for="author">Author</label>
+            <input name="author" id="author" type="text" placeholder="Search book" size="47" class="search-input"
+              required>
+            <label for="topic">Topic</label>
+            <select name="topic" id="topic" class="topic">
+              <option value="programming">Programing</option>
+              <option value="self-help">Self-Help</option>
+              <option value="devops">Devops</option>
+            </select>
+            <input type="submit" class="button submit" value="Create">
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <div id="delete_book_popup_box">
+      <div class="delete_modal-content">
+        <div class="delete_modal-header">
+          <span id="delete_book_close" class="close">×</span>
+
+          <h2>Delete book<i class="fa fa-address-book-o" aria-hidden="true"></i></h2>
+        </div>
+
+        <div class="delete_modal-body">
+          <p>Are you sure you want to delete <b id="delete-name">something</b> item?</p>
+          <button onclick="confirmDelete()" class="button confirm">Yes</button>
+          <button onclick="cancelDelete()" class="button cancel">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="modal" id="new_book">
+      <div class="new_book_content">
+      </div>
+    </div> -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
