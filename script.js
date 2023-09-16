@@ -145,12 +145,12 @@ function openDeleteModel(id, name) {
 
 function confirmDelete() {
     let books = JSON.parse(localStorage.getItem("book"));
-    const index = books.findIndex(book => book.id === Number(id));
-    console.log(id);
+    const index = books.findIndex(book => book.id === Number(deleteId));
+    console.log(deleteId);
     if (index !== -1) {
         books.splice(index, 1);
         localStorage.setItem("book", JSON.stringify(books));
-        document.getElementById(id).remove();
+        document.getElementById(deleteId).remove();
         deleteModel.style.display = "none"
     }
 }
